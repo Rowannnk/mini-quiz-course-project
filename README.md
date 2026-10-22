@@ -1,6 +1,6 @@
 # Mini Quiz Course Project
 
-A small TypeScript quiz built for Advanced JavaScript and TypeScript course.
+A small TypeScript quiz built for the FE403 Advanced JavaScript and TypeScript course (Module 1: Interfaces).
 
 ## Theme: Which Coffee Are You?
 
@@ -16,13 +16,30 @@ The example result is **Espresso**: fast, bold, and always ready to go.
 
 ## What I Built
 
-- `Choice` and `Question` interfaces that describe a quiz question and its answers
-- An `Outcome` interface (title and description) for the result card
-- A typed question with three choices, each with points
-- A hard-coded answer that picks a choice and prints it with its points
-- A result card printed with a template literal
+**Implement: Your first question**
 
-All of this is in [`src/index.ts`](src/index.ts).
+- `Choice` and `Question` interfaces that describe a quiz question and its answers
+- A typed question with three choices, each with a label and points
+- A hard-coded answer that picks a choice and prints it with its points
+
+**Adapt: The result card**
+
+- An `Outcome` interface with a `title` and a `description`, both strings
+- One outcome for my theme, annotated with `Outcome`
+- A result card printed with a template literal: title on one line, description on the next
+
+All of this is in [`src/index.ts`](src/index.ts), organized in sections: Types, Data, Quiz, Result card.
+
+## Reading Type Errors
+
+I introduced two mistakes on purpose, read the errors, then fixed them:
+
+| Mistake                            | What TypeScript said                                                      | Fix                         |
+| ---------------------------------- | ------------------------------------------------------------------------- | --------------------------- |
+| `poinst: 3` instead of `points: 3` | Object literal may only specify known properties, and `points` is missing | Corrected the property name |
+| `points: "3"` (a string)           | Type `string` is not assignable to type `number`                          | Used the number `3`         |
+
+This showed me that interfaces catch typos and wrong types before the code runs.
 
 ## How to Run
 
@@ -36,6 +53,8 @@ npx tsx src/index.ts
 ```bash
 npx tsc --noEmit
 ```
+
+No output means no type errors.
 
 ## Example Output
 
