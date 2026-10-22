@@ -1,7 +1,5 @@
 # Mini Quiz Course Project
 
-A small TypeScript quiz built for the FE403 Advanced JavaScript and TypeScript course (Module 1: Interfaces).
-
 ## Theme: Which Coffee Are You?
 
 The quiz matches a person to a coffee based on how they start their morning. The first question asks what you do when your 7 a.m. alarm goes off, and each choice is worth points that point toward a result.
