@@ -16,7 +16,7 @@ The example result is **Espresso**: fast, bold, and always ready to go.
 
 ## What I Built
 
-**Implement: Your first question**
+**Implement: First question**
 
 - `Choice` and `Question` interfaces that describe a quiz question and its answers
 - A typed question with three choices, each with a label and points
